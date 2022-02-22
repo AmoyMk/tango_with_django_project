@@ -1,6 +1,5 @@
 
 
-
 """
 Django settings for tango_with_django_project project.
 
@@ -133,3 +132,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+
+
