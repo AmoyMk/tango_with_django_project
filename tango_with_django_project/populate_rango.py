@@ -2,7 +2,7 @@
 
 
     
-   import os
+import os
 os.environ.setdefault(  'DJANGO_SETTINGS_MODULE',
                             'tango_with_django_project.settings')
 
@@ -50,7 +50,7 @@ def populate():
 
         c = add_cat(cat)
         for p in cat_data['pages']:
-            add_page(c, p['title'], p['url'])
+            add_page(c, p['title'], p['url'],)
 
      # Print out the categories we have added.
     for c in Category.objects.all():
@@ -78,4 +78,4 @@ def add_cat(name, views=0, likes=0):
 # Start execution here!
 if __name__ == '__main__':
     print('Starting Rango population script...')
-    populate() 
+    populate()
