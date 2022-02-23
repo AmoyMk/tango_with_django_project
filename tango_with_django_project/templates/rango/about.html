@@ -1,10 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
-<html lang="">
-<meta charset="UTF-8">
-<title>Rango</title>
-<body>
+
+{% block title_block %}
+Rango
+{% endblock %}
+{% block body_block %}
         <h1>Rango says...</h1>
         <div>
             hey there partner! <br />
@@ -12,10 +12,10 @@
         </div>
         <div>
             <a href="/rango/about/">About</a><br />
+            <a href="{% url 'rango:about' %}">About</a>
+            <a href="{% url 'rango.views.about' %}">About</a>
 
-            <img src="{% get_media_prefix %}cat.jpg"
-                 alt="Picture of Cat" />
+            <img src="{{MEDIA_URL}}cat.jpg" alt="Picture of cat"/>
 
         </div>
-    </body>
-</html>
+{% endblock %}
